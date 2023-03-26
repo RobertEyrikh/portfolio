@@ -1,9 +1,15 @@
 <script setup>
+import { useTheme } from 'vuetify'
 const appTitle = ref("Robert Eyrikh");
 const menuItems = ref([
   { title: "Проекты", path: "/projects", icon: "mdi-folder" },
   { title: "Репозитории", path: "/about", icon: "mdi-github" },
 ]);
+const theme = useTheme()
+const toggleTheme = () => {
+  theme.global.name.value = theme.global.current.value.dark ? 'myCustomLightTheme' : 'myCustomDarkTheme'
+  console.log(theme.global)
+  }
 </script>
 
 <template>
@@ -58,6 +64,7 @@ const menuItems = ref([
         </v-list-item>
       </v-list>
     </v-menu>
+    <v-btn icon="mdi-brightness-4" @click="toggleTheme"></v-btn>
   </v-app-bar>
 </template>
 
