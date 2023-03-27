@@ -1,5 +1,4 @@
 <script setup>
-import { ref } from "vue";
 const brieflyBio = "Привет, я веб разработчик из Москвы";
 const myName = "Роберт Эйрих";
 const mySkills = [
@@ -32,7 +31,7 @@ const contacts = [
     <v-spacer></v-spacer>
     <v-container class="pl-10 pr-10">
       <v-row class="mt-16 mb-16">
-        <v-card rounded="lg" variant="elevated" class="mx-auto" color="secondary-darken-1" width="522px" elevation="0">
+        <v-card rounded="lg" variant="elevated" class="mx-auto" width="522px" elevation="0">
           <v-card-text class="d-flex justify-center text-subtitle-1">
             {{ brieflyBio }}
           </v-card-text>

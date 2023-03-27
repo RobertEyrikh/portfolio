@@ -15,6 +15,9 @@ const layout = "main-layout";
   margin: 0;
   padding: 0;
 }
+.v-card__overlay {
+  background-color: transparent;
+}
 .pointer {
   cursor: pointer
 }
