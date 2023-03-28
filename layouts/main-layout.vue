@@ -1,9 +1,9 @@
 <template>
-    <the-header />
-    <v-main>
-      <slot />
-    </v-main>
-    <the-footer />
+  <the-header />
+  <v-main>
+    <slot />
+  </v-main>
+  <the-footer />
 </template>
 
 <style scoped>

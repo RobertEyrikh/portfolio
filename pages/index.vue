@@ -12,7 +12,7 @@ const mySkills = [
   { name: "Express js", icon: "mdi-nodejs" },
 ];
 const myWork =
-  "Мне 22 года, я фрилансер и разработчик полного стека из Москвы со страстью к созданию цифровых услуг/вещей, которые он хочет. У него есть талант ко всему, что касается запуска продуктов, от планирования и проектирования до решения реальных проблем с кодом. Когда он не в сети, он любит тусоваться со своей камерой. В настоящее время он живет за счет собственного продукта под названием Inkdrop . Он публикует контент для маркетинга своих продуктов, а его канал на YouTube под названием « Dev as Life » насчитывает более 100 тысяч подписчиков.";
+  "Мне 22 года, я фрилансер и веб разработчик из Москвы. Я создаю веб-приложения начиная с клиентской и серверной части, заканчивая их развертыванием. Я люблю компьютеры и все что с ними связано.";
 const myBio = [
   { year: "2000", text: "Родился в городе Партизанск, Приморский край" },
   { year: "2021", text: "Окончил Московский Институт Электронной Техники по специальности робототехника (11.03.03)" },
@@ -31,7 +31,7 @@ const contacts = [
     <v-spacer></v-spacer>
     <v-container class="pl-10 pr-10">
       <v-row class="mt-16 mb-16">
-        <v-card rounded="lg" variant="elevated" class="mx-auto" width="522px" elevation="0">
+        <v-card color="secondary-darken-1" rounded="lg" variant="elevated" class="mx-auto" width="522px" elevation="0">
           <v-card-text class="d-flex justify-center text-subtitle-1">
             {{ brieflyBio }}
           </v-card-text>
@@ -58,7 +58,7 @@ const contacts = [
         <v-card class="mx-auto" width="522px" elevation="0">
           <v-card-title class="pa-0 mb-3 font-weight-bold">О себе</v-card-title>
           <v-card-text class="text--grey-lighten-1 text-justify pa-0 d-flex text-subtitle-1">
-            {{ myWork }}
+            &nbsp {{ myWork }}
           </v-card-text>
           <div class="d-flex justify-center">
             <v-btn to="projects" class="mt-4" color="deep-purple-lighten-1" variant="flat">Мое портфолио ></v-btn>

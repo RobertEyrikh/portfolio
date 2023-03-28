@@ -15,7 +15,7 @@ const projects = [
       <v-sheet elevation="0" class="mx-auto" max-width="522px">
         <v-card-title class="pa-0 font-weight-bold">Проекты</v-card-title>
         <v-row class="mt-4 mb-4">
-          <v-col class="mb-3" v-for="project in projects" :key="project.name" cols="12" sm="6">
+          <v-col v-for="project in projects" :key="project.name" class="mb-3" cols="12" sm="6">
             <v-card :to="`/projects/${project.name}`" rounded="lg" elevation="0">
               <v-img class="img-rounded" :height="120" cover :src="project.image"></v-img>
               <v-card-title class="text-center">{{ project.name }}</v-card-title>

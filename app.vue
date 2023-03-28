@@ -19,7 +19,7 @@ const layout = "main-layout";
   background-color: transparent;
 }
 .pointer {
-  cursor: pointer
+  cursor: pointer;
 }
 .page-enter-active,
 .page-leave-active {
@@ -30,5 +30,4 @@ const layout = "main-layout";
   transform: translateY(20px);
   opacity: 0;
 }
-
 </style>

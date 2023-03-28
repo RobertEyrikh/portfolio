@@ -1,71 +1,53 @@
 <script setup>
-import { useTheme } from 'vuetify'
+import { useTheme } from "vuetify";
 const appTitle = ref("Robert Eyrikh");
-const menuItems = ref([
-  { title: "Проекты", path: "/projects", icon: "mdi-folder" },
-  { title: "Репозитории", path: "/about", icon: "mdi-github" },
-]);
-const theme = useTheme()
+const theme = useTheme();
 const toggleTheme = () => {
-  theme.global.name.value = theme.global.current.value.dark ? 'myCustomLightTheme' : 'myCustomDarkTheme'
-  console.log(theme.global)
-  }
+  theme.global.name.value = theme.global.current.value.dark ? "myCustomLightTheme" : "myCustomDarkTheme";
+};
 </script>
 
 <template>
-  <v-app-bar flat color="transparent" sticky width="100%" class="app-bar">
-    <v-toolbar-title class="d-sm-none logo">
-      <v-btn to="/" variant="plain" class="logo pointer" size="large">
-        <v-icon icon="mdi-waze" size="large" class="logo__icon"></v-icon>
-        {{ appTitle }}
-      </v-btn>
-    </v-toolbar-title>
-
-    <v-spacer class="d-none d-sm-block"></v-spacer>
-    <v-toolbar-items class="d-none d-sm-block">
-      <v-btn to="/" variant="plain" class="logo pointer" size="large">
-        <v-icon icon="mdi-waze" size="large" class="logo__icon"></v-icon>
-        {{ appTitle }}
-      </v-btn>
-      <v-btn
-        flat
-        v-for="item in menuItems"
-        :key="item.title"
-        :to="item.path"
-        :prepend-icon="item.icon"
-      >
-        {{ item.title }}
-      </v-btn>
-    </v-toolbar-items>
-    <v-spacer class="d-none d-sm-block"></v-spacer>
-    <v-menu location="start">
-      <template v-slot:activator="{ props }">
-        <v-btn
-          class="d-sm-none"
-          color="grey-lighten-2"
-          dark
-          v-bind="props"
-          icon
-        >
-          <v-icon size="x-large"> mdi-menu </v-icon>
+  <div class="the-header">
+    <v-app-bar flat color="transparent" sticky width="100%" class="app-bar">
+      <v-toolbar-title class="d-sm-none logo">
+        <v-btn to="/" variant="plain" class="logo pointer" size="large">
+          <v-icon icon="mdi-waze" size="large" class="logo__icon"></v-icon>
+          {{ appTitle }}
         </v-btn>
-      </template>
-      <v-list bg-color="teal-darken-4">
-        <v-list-item
-          class="pointer"
-          v-for="item in menuItems"
-          :key="item.title"
-          :to="item.path"
-          :value="item.title"
-        >
-          <v-list-item-title  >{{
-            item.title
-          }}</v-list-item-title>
-        </v-list-item>
-      </v-list>
-    </v-menu>
-    <v-btn icon="mdi-brightness-4" @click="toggleTheme"></v-btn>
-  </v-app-bar>
+      </v-toolbar-title>
+
+      <v-spacer class="d-none d-sm-block"></v-spacer>
+      <v-toolbar-items class="d-none d-sm-block">
+        <v-btn to="/" variant="plain" class="logo pointer" size="large">
+          <v-icon icon="mdi-waze" size="large" class="logo__icon"></v-icon>
+          {{ appTitle }}
+        </v-btn>
+        <v-btn flat to="/projects" prepend-icon="mdi-folder"> Проекты </v-btn>
+        <v-btn flat href="https://github.com/RobertEyrikh?tab=repositories" target="_blank" prepend-icon="mdi-github"> Репозитории </v-btn>
+      </v-toolbar-items>
+      <v-spacer class="d-none d-sm-block"></v-spacer>
+      <v-menu location="start">
+        <template v-slot:activator="{ props }">
+          <v-btn class="d-sm-none" color="grey-lighten-2" dark v-bind="props" icon>
+            <v-icon size="x-large"> mdi-menu </v-icon>
+          </v-btn>
+        </template>
+        <v-list bg-color="teal-darken-4">
+          <v-list-item class="pointer" to="/projects" value="Проекты">
+            <v-list-item-title>Проекты</v-list-item-title>
+          </v-list-item>
+          <v-list-item class="pointer" href="https://github.com/RobertEyrikh?tab=repositories" target="_blank" value="item.title">
+            <v-list-item-title>Репозитории</v-list-item-title>
+          </v-list-item>
+        </v-list>
+      </v-menu>
+      <v-btn icon="mdi-brightness-4" @click="toggleTheme"></v-btn>
+    </v-app-bar>
+    <client-only>
+      <the-model></the-model>
+    </client-only>
+  </div>
 </template>
 
 <style scoped lang="scss">
@@ -79,8 +61,8 @@ const toggleTheme = () => {
 .logo {
   &:hover {
     .logo__icon {
-      -ms-transform:rotate(30deg);
-      -webkit-transform:rotate(30deg);
+      -ms-transform: rotate(30deg);
+      -webkit-transform: rotate(30deg);
       transform: rotate(30deg);
     }
   }
