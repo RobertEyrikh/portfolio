@@ -1,6 +1,6 @@
 <template>
   <the-header />
-  <v-main>
+  <v-main class="pt-0">
     <slot />
   </v-main>
   <the-footer />

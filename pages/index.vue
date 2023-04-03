@@ -7,9 +7,11 @@ const mySkills = [
   { name: "Nuxt", icon: "mdi-nuxt" },
   { name: "HTML", icon: "mdi-language-html5" },
   { name: "CSS", icon: "mdi-language-css3" },
+  { name: "Vuetify", icon: "mdi-vuejs" },
   { name: "TypeScript", icon: "mdi-language-typescript" },
   { name: "Node js", icon: "mdi-nodejs" },
   { name: "Express js", icon: "mdi-nodejs" },
+  { name: "Jest", icon: "mdi-nodejs" },
 ];
 const myWork =
   "Мне 22 года, я фрилансер и веб разработчик из Москвы. Я создаю веб-приложения начиная с клиентской и серверной части, заканчивая их развертыванием. Я люблю компьютеры и все что с ними связано.";
@@ -18,7 +20,7 @@ const myBio = [
   { year: "2021", text: "Окончил Московский Институт Электронной Техники по специальности робототехника (11.03.03)" },
   { year: "2022 по н.в", text: "Работа фрилансером" },
 ];
-const myHobbies = "Музыка, Gym, Путешествия, Видеоигры";
+const myHobbies = "Спортзал, Путешествия, Видеоигры";
 const contacts = [
   { name: "RobertEyrikh@gmail.com", link: "mailto:RobertEyrikh@gmail.com", icon: "mdi-gmail" },
   { name: "@EyrikhR", link: " https://t.me/EyrikhR", icon: "mdi-send" },
@@ -30,7 +32,7 @@ const contacts = [
   <div class="home-page">
     <v-spacer></v-spacer>
     <v-container class="pl-10 pr-10">
-      <v-row class="mt-16 mb-16">
+      <v-row class="mt-0 mb-16">
         <v-card color="secondary-darken-1" rounded="lg" variant="elevated" class="mx-auto" width="522px" elevation="0">
           <v-card-text class="d-flex justify-center text-subtitle-1">
             {{ brieflyBio }}
@@ -94,7 +96,7 @@ const contacts = [
         <v-card class="mx-auto" width="522px" elevation="0">
           <v-card-title class="pa-0 mb-3 font-weight-bold">Мои увлечения</v-card-title>
           <v-card-text class="text--grey-lighten-1 text-justify pa-0 d-flex text-subtitle-1">
-            Музыка,&nbsp<v-icon size="small" icon="mdi-gender-male"></v-icon>Gym, Путешествия, Видеоигры
+            {{ myHobbies }}
           </v-card-text>
         </v-card>
       </v-row>

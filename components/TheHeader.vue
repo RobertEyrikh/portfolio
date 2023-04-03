@@ -29,11 +29,11 @@ const toggleTheme = () => {
       <v-spacer class="d-none d-sm-block"></v-spacer>
       <v-menu location="start">
         <template v-slot:activator="{ props }">
-          <v-btn class="d-sm-none" color="grey-lighten-2" dark v-bind="props" icon>
+          <v-btn class="d-sm-none" dark v-bind="props" icon>
             <v-icon size="x-large"> mdi-menu </v-icon>
           </v-btn>
         </template>
-        <v-list bg-color="teal-darken-4">
+        <v-list bg-color="secondary-darken-1">
           <v-list-item class="pointer" to="/projects" value="Проекты">
             <v-list-item-title>Проекты</v-list-item-title>
           </v-list-item>
@@ -45,7 +45,9 @@ const toggleTheme = () => {
       <v-btn icon="mdi-brightness-4" @click="toggleTheme"></v-btn>
     </v-app-bar>
     <client-only>
-      <the-model></the-model>
+      <v-card elevation="0" height="400">
+        <the-model></the-model>
+      </v-card>
     </client-only>
   </div>
 </template>
