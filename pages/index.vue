@@ -3,18 +3,19 @@ const brieflyBio = "Привет, я веб разработчик из Моск
 const myName = "Роберт Эйрих";
 const mySkills = [
   { name: "JavaScript", icon: "mdi-language-javascript" },
-  { name: "Vue js", icon: "mdi-vuejs" },
+  { name: "Vue.js", icon: "mdi-vuejs" },
   { name: "Nuxt", icon: "mdi-nuxt" },
   { name: "HTML", icon: "mdi-language-html5" },
   { name: "CSS", icon: "mdi-language-css3" },
   { name: "Vuetify", icon: "mdi-vuejs" },
   { name: "TypeScript", icon: "mdi-language-typescript" },
   { name: "Node js", icon: "mdi-nodejs" },
-  { name: "Express js", icon: "mdi-nodejs" },
-  { name: "Jest", icon: "mdi-nodejs" },
+  { name: "Express js", icon: "custom:express" },
+  { name: "Jest", icon: "custom:jest" },
+  { name: "Three.js", icon: "custom:threeJs" },
 ];
 const myWork =
-  "Мне 22 года, я фрилансер и веб разработчик из Москвы. Я создаю веб-приложения начиная с клиентской и серверной части, заканчивая их развертыванием. Я люблю компьютеры и все что с ними связано.";
+  "Фрилансер и веб разработчик из Москвы. Разрабатываю веб приложения с использованием JavaScript, TypeScript, node js и фреймворками Vue.js, Nuxt и express js. Интересуюсь информационными технологиями , в  частности созданием веб приложений, начиная с дизайна, заканчивая их развертывание на сервере. Знаком с Jest, React.js, Three.js, Docker.";
 const myBio = [
   { year: "2000", text: "Родился в городе Партизанск, Приморский край" },
   { year: "2021", text: "Окончил Московский Институт Электронной Техники по специальности робототехника (11.03.03)" },
@@ -23,7 +24,7 @@ const myBio = [
 const myHobbies = "Спортзал, Путешествия, Видеоигры";
 const contacts = [
   { name: "RobertEyrikh@gmail.com", link: "mailto:RobertEyrikh@gmail.com", icon: "mdi-gmail" },
-  { name: "@EyrikhR", link: " https://t.me/EyrikhR", icon: "mdi-send" },
+  { name: "@EyrikhR", link: " https://t.me/EyrikhR", icon: "custom:telegram" },
   { name: "@RobertEyrikh", link: "https://github.com/RobertEyrikh", icon: "mdi-github" },
 ];
 </script>

@@ -12,7 +12,7 @@ const toggleTheme = () => {
     <v-app-bar flat color="transparent" sticky width="100%" class="app-bar">
       <v-toolbar-title class="d-sm-none logo">
         <v-btn to="/" variant="plain" class="logo pointer" size="large">
-          <v-icon icon="mdi-waze" size="large" class="logo__icon"></v-icon>
+          <v-icon icon="custom:logo"  size="large" class="logo__icon"></v-icon>
           {{ appTitle }}
         </v-btn>
       </v-toolbar-title>
@@ -20,7 +20,7 @@ const toggleTheme = () => {
       <v-spacer class="d-none d-sm-block"></v-spacer>
       <v-toolbar-items class="d-none d-sm-block">
         <v-btn to="/" variant="plain" class="logo pointer" size="large">
-          <v-icon icon="mdi-waze" size="large" class="logo__icon"></v-icon>
+          <v-icon icon="custom:logo" size="large" class="logo__icon"></v-icon>
           {{ appTitle }}
         </v-btn>
         <v-btn flat to="/projects" prepend-icon="mdi-folder"> Проекты </v-btn>

@@ -1,6 +1,8 @@
 import { createVuetify, ThemeDefinition } from "vuetify";
+import { mdi } from "vuetify/iconsets/mdi";
 import * as components from "vuetify/components";
 import * as directives from "vuetify/directives";
+import { customSVGs } from "~~/assets/custom-svgs";
 // import colors from 'vuetify/lib/util/colors'
 
 const myCustomLightTheme: ThemeDefinition = {
@@ -46,6 +48,13 @@ export default defineNuxtPlugin((nuxtApp) => {
       themes: {
         myCustomLightTheme,
         myCustomDarkTheme,
+      },
+    },
+    icons: {
+      defaultSet: "mdi",
+      sets: {
+        mdi,
+        custom: customSVGs,
       },
     },
   });
