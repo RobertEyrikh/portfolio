@@ -63,15 +63,32 @@ const toggleTheme = () => {
 .logo {
   &:hover {
     .logo__icon {
-      -ms-transform: rotate(30deg);
-      -webkit-transform: rotate(30deg);
-      transform: rotate(30deg);
+      // -ms-transform: translateY(-9px);
+      // -webkit-transform: translateY(-9px);
+      // transform: translateY(-9px);
+      animation: bounce 1s ease-in-out;
     }
   }
 }
-.logo__icon {
-  transition: transform 0.2s ease-in-out;
-  -webkit-transition: -webkit-transform 0.2s ease-in-out;
-  -ms-transition: -ms-transform 0.2s ease-in-out;
+@keyframes bounce {
+	0%, 20%, 60%, 100% {
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+	}
+
+	40% {
+		transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+	}
+
+	80% {
+		transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+	}
 }
+// .logo__icon {
+//   transition: transform 0.2s ease-in-out;
+//   -webkit-transition: -webkit-transform 0.2s ease-in-out;
+//   -ms-transition: -ms-transform 0.2s ease-in-out;
+// }
 </style>
