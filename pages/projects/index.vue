@@ -1,4 +1,15 @@
 <script setup>
+const title = ref("Robert Eyrikh's projects")
+const description = ref('Мои проекты')
+useHead({
+  title,
+  meta: [
+    {
+      name: "Robert Eyrikh",
+      content: description,
+    },
+  ],
+});
 const projects = [
   { name: "Portfolio", description: "Вы сейчас здесь ;)", image: "/portfolio-1.jpg" },
   { name: "Bingual", description: "Приложение для изучения иностранных слов, c помощью созданных вами карточек", image: "/bingual-1.jpg" },
