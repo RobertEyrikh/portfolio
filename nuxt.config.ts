@@ -1,7 +1,4 @@
 export default defineNuxtConfig({
-  buildModules: [
-    '@nuxtjs/svg'
-  ],
   css: ["vuetify/lib/styles/main.sass", "@mdi/font/css/materialdesignicons.min.css"],
   build: {
     transpile: ["vuetify"],
@@ -13,5 +10,8 @@ export default defineNuxtConfig({
   },
   app: {
     pageTransition: { name: "page", mode: "out-in" },
+  },
+  experimental: {
+    inlineSSRStyles: false
   },
 });

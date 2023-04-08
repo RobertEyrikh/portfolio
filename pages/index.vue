@@ -15,7 +15,7 @@ const mySkills = [
   { name: "Three.js", icon: "custom:threeJs" },
 ];
 const myWork =
-  "Фрилансер и веб разработчик из Москвы. Разрабатываю веб приложения с использованием JavaScript, TypeScript, node js и фреймворками Vue.js, Nuxt и express js. Интересуюсь информационными технологиями , в  частности созданием веб приложений, начиная с дизайна, заканчивая их развертывание на сервере. Знаком с Jest, React.js, Three.js, Docker.";
+  "Фрилансер и веб разработчик из Москвы. Имею опыт работы с JavaScript, TypeScript, node js, а также фреймворками Vue.js, Nuxt, express js и библиотеками Jest, React.js, Three.js. Меня интересует процесс разработки веб приложения на всех этапах, начиная с дизайна, заканчивая их развертыванием на сервере.";
 const myBio = [
   { year: "2000", text: "Родился в городе Партизанск, Приморский край" },
   { year: "2021", text: "Окончил Московский Институт Электронной Техники по специальности робототехника (11.03.03)" },
@@ -61,7 +61,7 @@ const contacts = [
         <v-card class="mx-auto" width="522px" elevation="0">
           <v-card-title class="pa-0 mb-3 font-weight-bold">О себе</v-card-title>
           <v-card-text class="text--grey-lighten-1 text-justify pa-0 d-flex text-subtitle-1">
-            &nbsp {{ myWork }}
+            {{ myWork }}
           </v-card-text>
           <div class="d-flex justify-center">
             <v-btn to="projects" class="mt-4" color="deep-purple-lighten-1" variant="flat">Мое портфолио ></v-btn>
@@ -109,7 +109,7 @@ const contacts = [
             <v-col class="ma-0">
               <v-btn variant="text" :href="contact.link" target="_blank" color="purple-lighten-1" class="pl-0 text-subtitle-1">
                 <v-icon :icon="contact.icon"></v-icon>
-                {{ contact.name }}
+                &nbsp{{ contact.name }}
               </v-btn>
             </v-col>
           </v-row>
