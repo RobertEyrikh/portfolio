@@ -1,5 +1,14 @@
 <script setup>
 import { useMainStore } from "~~/store/mainStore";
+useHead({
+  title: "Home",
+  meta: [
+    {
+      name: "Robert Eyrikh",
+      content: "Home page",
+    },
+  ],
+});
 const mainStore = useMainStore();
 const text = computed(() => {
   return mainStore.getText

@@ -1,4 +1,13 @@
 <script setup>
+useHead({
+  title: "Project",
+  meta: [
+    {
+      name: "Robert Eyrikh",
+      content: "Project page",
+    },
+  ],
+});
 const route = useRoute();
 const projectInfo = computed(()=> getProjectInfo(route.params.name));
 const showDialog = ref(false)
