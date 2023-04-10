@@ -1,5 +1,15 @@
 <script setup>
+import { useMainStore } from "~~/store/mainStore";
+import { useTheme } from "vuetify";
+const theme = useTheme();
 const layout = "main-layout";
+const mainStore = useMainStore();
+onMounted(() => {
+  mainStore.setLanguage()
+  if(mainStore.getThemeFromLS() === "myCustomLightTheme") {
+    theme.global.name.value = theme.global.current.value.dark ? "myCustomLightTheme" : "myCustomDarkTheme";
+  }
+})
 </script>
 
 <template>

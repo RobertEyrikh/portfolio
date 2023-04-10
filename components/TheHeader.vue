@@ -1,10 +1,16 @@
 <script setup>
 import { useTheme } from "vuetify";
-const appTitle = ref("Robert Eyrikh");
+import { useMainStore } from "~~/store/mainStore";
 const theme = useTheme();
+const mainStore = useMainStore();
 const toggleTheme = () => {
   theme.global.name.value = theme.global.current.value.dark ? "myCustomLightTheme" : "myCustomDarkTheme";
+  mainStore.addThemeToLS(theme.global.name.value)
 };
+const text = computed(() => {
+  return mainStore.getText
+})
+const switchLanguage = () => mainStore.switchLanguage()
 </script>
 
 <template>
@@ -13,7 +19,7 @@ const toggleTheme = () => {
       <v-toolbar-title class="d-sm-none logo">
         <v-btn to="/" variant="plain" class="logo pointer" size="large">
           <v-icon icon="custom:logo"  size="large" class="logo__icon"></v-icon>
-          {{ appTitle }}
+          {{ text.name }}
         </v-btn>
       </v-toolbar-title>
 
@@ -21,11 +27,12 @@ const toggleTheme = () => {
       <v-toolbar-items class="d-none d-sm-block">
         <v-btn to="/" variant="plain" class="logo pointer" size="large">
           <v-icon icon="custom:logo" size="large" class="logo__icon"></v-icon>
-          {{ appTitle }}
+          {{ text.name }}
         </v-btn>
-        <v-btn flat to="/projects" prepend-icon="mdi-folder"> Проекты </v-btn>
-        <v-btn flat href="https://github.com/RobertEyrikh?tab=repositories" target="_blank" prepend-icon="mdi-github"> Репозитории </v-btn>
+        <v-btn flat to="/projects" prepend-icon="mdi-folder"> {{ text.projects }} </v-btn>
+        <v-btn flat href="https://github.com/RobertEyrikh?tab=repositories" target="_blank" prepend-icon="mdi-github"> {{ text.repositories }} </v-btn>
       </v-toolbar-items>
+
       <v-spacer class="d-none d-sm-block"></v-spacer>
       <v-menu location="start">
         <template v-slot:activator="{ props }">
@@ -35,27 +42,26 @@ const toggleTheme = () => {
         </template>
         <v-list bg-color="secondary-darken-1">
           <v-list-item class="pointer" to="/projects" value="Проекты">
-            <v-list-item-title>Проекты</v-list-item-title>
+            <v-list-item-title>{{ text.projects }}</v-list-item-title>
           </v-list-item>
           <v-list-item class="pointer" href="https://github.com/RobertEyrikh?tab=repositories" target="_blank" value="item.title">
-            <v-list-item-title>Репозитории</v-list-item-title>
+            <v-list-item-title>{{ text.repositories }}</v-list-item-title>
           </v-list-item>
         </v-list>
       </v-menu>
       <v-btn icon="mdi-brightness-4" @click="toggleTheme"></v-btn>
+      <v-btn @click="switchLanguage" rounded>{{ mainStore.getLanguage }}</v-btn>
     </v-app-bar>
+
     <client-only>
       <v-card elevation="0" height="400">
-        <the-model></the-model>
+        <the-model class="the-model"></the-model>
       </v-card>
     </client-only>
   </div>
 </template>
 
 <style scoped lang="scss">
-.menu {
-  background-color: black;
-}
 .app-bar {
   backdrop-filter: blur(2px);
   background-color: black;
@@ -86,9 +92,4 @@ const toggleTheme = () => {
     -webkit-transform: translateY(-5px);
 	}
 }
-// .logo__icon {
-//   transition: transform 0.2s ease-in-out;
-//   -webkit-transition: -webkit-transform 0.2s ease-in-out;
-//   -ms-transition: -ms-transform 0.2s ease-in-out;
-// }
 </style>

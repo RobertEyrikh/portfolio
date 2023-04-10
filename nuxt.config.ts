@@ -14,4 +14,16 @@ export default defineNuxtConfig({
   experimental: {
     inlineSSRStyles: false
   },
+  modules: [
+    '@pinia/nuxt'
+  ],
+  alias: {
+    pinia: "/node_modules/@pinia/nuxt/node_modules/pinia/dist/pinia.mjs"
+  },
+  pinia: {
+    autoImports: [
+      'defineStore',
+      ['defineStore', 'definePiniaStore'],
+    ],
+  },
 });

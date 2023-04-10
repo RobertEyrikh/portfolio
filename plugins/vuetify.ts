@@ -3,6 +3,7 @@ import { mdi } from "vuetify/iconsets/mdi";
 import * as components from "vuetify/components";
 import * as directives from "vuetify/directives";
 import { customSVGs } from "~~/assets/custom-svgs";
+import { ru, en } from 'vuetify/locale'
 // import colors from 'vuetify/lib/util/colors'
 
 const myCustomLightTheme: ThemeDefinition = {

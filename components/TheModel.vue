@@ -106,5 +106,8 @@ const loop = () => {
 </template>
 
 <style scoped>
-
+.the-model {
+  position: relative;
+  z-index: 998;
+}
 </style>

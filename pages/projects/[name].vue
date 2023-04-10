@@ -1,9 +1,9 @@
 <script setup>
 const route = useRoute();
-const projectInfo = getProjectInfo(route.params.name);
+const projectInfo = computed(()=> getProjectInfo(route.params.name));
 const showDialog = ref(false)
 const routes = ref([
-  { title: "Проекты", disabled: false, to: "/projects", color: "#EA80FC" },
+  { title: "Projects", disabled: false, to: "/projects", color: "#EA80FC" },
   { title: route.params.name, disabled: false, color: "text-primary" },
 ]);
 const currentImageIndex = ref(null)
@@ -12,7 +12,7 @@ const openDialog = (index) => {
   showDialog.value = true
 }
 const nextImage = (direction) => {
-  let imagesLength = projectInfo.images.length
+  let imagesLength = projectInfo.value.images.length
   if(direction === "next") {
     if(imagesLength - 1 === currentImageIndex.value) {
       currentImageIndex.value = 0
