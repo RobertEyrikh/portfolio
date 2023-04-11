@@ -6,12 +6,15 @@
   "myName": "Robert Eyrikh",
   "brieflyDescription": "Web developer (Vue js, node js)",
   "about": "About",
-  "myWork": "Freelancer and web developer from Moscow. I have experience with JavaScript, TypeScript, node js, as well as Vue.js, Nuxt, express js frameworks and Jest, React.js, Three.js libraries. I am interested in the process of developing a web application at all stages, from design to deployment on the server.",
+  "myWork": "Freelancer and web developer. I have experience with JavaScript, TypeScript, node js, as well as frameworks such as Vue.js, Nuxt, express js and libraries such as Jest, React.js, Three.js. I am interested in the process of developing a web application at all stages, from design to deployment on the server.",
   "myPortfolio": "My portfolio",
   "biographyTitle": "Biography",
   "biography": [
     { "year": "2000", "text": "Born in Partizansk, Primorsky Krai" },
-    { "year": "2021", "text": "Graduated from the Moscow Institute of Electronic Technology with a degree in robotics (11.03.03)" },
+    {
+      "year": "2021",
+      "text": "Graduated from the Moscow Institute of Electronic Technology with a degree in robotics (11.03.03)"
+    },
     { "year": "2022 to p.", "text": "Freelance work" }
   ],
   "scillsTitle": "Main skills",
@@ -30,19 +33,51 @@
   ],
   "hobbiesTitle": " My Hobbies",
   "hobbies": "Gym, Traveling, Video games",
-  "contactsTitle": "Контакты",
+  "contactsTitle": "Contacts",
   "contacts": [
-    { "name": "RobertEyrikh@gmail.com", "link": "mailto:RobertEyrikh@gmail.com", "icon": "mdi-gmail" },
-    { "name": "@EyrikhR", "link": " https://t.me/EyrikhR", "icon": "custom:telegram" },
-    { "name": "@RobertEyrikh", "link": "https://github.com/RobertEyrikh", "icon": "mdi-github" }
+    {
+      "name": "RobertEyrikh@gmail.com",
+      "link": "mailto:RobertEyrikh@gmail.com",
+      "icon": "mdi-gmail"
+    },
+    {
+      "name": "@EyrikhR",
+      "link": " https://t.me/EyrikhR",
+      "icon": "custom:telegram"
+    },
+    {
+      "name": "@RobertEyrikh",
+      "link": "https://github.com/RobertEyrikh",
+      "icon": "mdi-github"
+    }
   ],
   "projeectPageTitle": "My projects",
   "projectsBriefly": [
-    { "name": "Portfolio", "description": "You are here now ;)", "image": "/portfolio-1.jpg" },
-    { "name": "Bingual", "description": "Application for learning foreign words, with the help of flashcards you have created", "image": "/bingual-1.jpg" },
-    { "name": "Fillib", "description": "Library with your favorite movies", "image": "/fillib-1.jpg" },
-    { "name": "Nersisyan", "description": "Website of Lawyer Nersisyan", "image": "/nersisyan-1.jpg" },
-    { "name": "Letherman", "description": "Online store of leather goods", "image": "/bagshop-1.jpg" }
+    {
+      "name": "Portfolio",
+      "description": "You are here now ;)",
+      "image": "/portfolio-1.jpg"
+    },
+    {
+      "name": "Bingual",
+      "description": "Application for learning foreign words, with the help of flashcards you have created",
+      "image": "/bingual-1.jpg"
+    },
+    {
+      "name": "Fillib",
+      "description": "Library with your favorite movies",
+      "image": "/fillib-1.jpg"
+    },
+    {
+      "name": "Nersisyan",
+      "description": "Website of Lawyer Nersisyan",
+      "image": "/nersisyan-1.jpg"
+    },
+    {
+      "name": "Letherman",
+      "description": "Online store of leather goods",
+      "image": "/bagshop-1.jpg"
+    }
   ],
   "projectsInfo": [
     {
@@ -50,46 +85,97 @@
       "description": "Portfolio site where you can view my work. This is an ssr application developed with Nuxt. 3d model in the site header, added using the Three.js library. The application is deployed using docker. Nginx acts as a web server.",
       "images": ["/portfolio-1.jpg"],
       "tags": [
-        { "fieldName": "github", "fieldValue": ["https://github.com/RobertEyrikh/portfolio"] },
+        {
+          "fieldName": "github",
+          "fieldValue": ["https://github.com/RobertEyrikh/portfolio"]
+        },
         { "fieldName": "stack", "fieldValue": ["TypeScript, Nuxt, Three js"] }
       ]
     },
     {
       "name": "Bingual",
-      "description": "Bingual is a web application in which the user creates word-translation cards, and then learns words from them, filling in the fields one by one. The user can log in, create, delete and edit cards. Implemented drag and drop, form validation and email confirmation. The frontend was developed using Vue.js, using the axios libraries for asynchronous requests, pinia as a state manager. Mongo DB was chosen for the database. The backend is implemented on node.js + express js. Used libraries mongoose, json-web-token, nodemailer. The application is packaged in docker containers and deployed using docker compose. Nginx acts as a web server.",
-      "images": ["/bingual-2.jpg", "/bingual-3.jpg", "/bingual-4.jpg", "/bingual-5.jpg"],
+      "description": "Bingual is a web application in which a user creates word-translation cards, and then learns words by filling them in fields one by one. The user can log in, create, delete and edit cards. Implemented drag and drop, form validation and email confirmation. The frontend was developed using Vue.js, using the axios library for asynchronous requests, pinia as a state manager. Mongo DB was as a database. The backend is implemented using node.js + express js. Libraries mongoose, json-web-token, nodemailer are used. The application is packaged in docker containers and deployed using docker compose. Nginx acts as a web server.",
+      "images": [
+        "/bingual-2.jpg",
+        "/bingual-3.jpg",
+        "/bingual-4.jpg",
+        "/bingual-5.jpg"
+      ],
       "tags": [
-        { "fieldName": "site", "fieldValue": ["http://bingual.eyrikhproductions.ru"] },
-        { "fieldName": "github", "fieldValue": ["https://github.com/RobertEyrikh/bingual-client", "https://github.com/RobertEyrikh/bingual-server"] },
-        { "fieldName": "stack", "fieldValue": ["JavaScript, Vue 3, Express js, mongoDB"] }
+        {
+          "fieldName": "site",
+          "fieldValue": ["http://bingual.eyrikhproductions.ru"]
+        },
+        {
+          "fieldName": "github",
+          "fieldValue": [
+            "https://github.com/RobertEyrikh/bingual-client",
+            "https://github.com/RobertEyrikh/bingual-server"
+          ]
+        },
+        {
+          "fieldName": "stack",
+          "fieldValue": ["JavaScript, Vue 3, Express js, mongoDB"]
+        }
       ]
     },
     {
       "name": "Fillib",
-      "description": "Fillib is an online library for your watched movies as well as movies you plan to watch. In this web application, you can enter your own rating, description, and date you watched the movie, and in the Seen tab, they are automatically sorted by the date they were watched. The main page contains movies whose data is taken from Kinopoisk unofficial Api. Films are divided into categories. There is pagination, search and filtering, their state is synchronized with the address bar. The frontend was developed using Vue js, scss was used as a preprocessor for css, vuex was used as a global storage. The backend is implemented using node.js + express js. Implemented authorization by jwt token. Used libraries jsonwebtoken, mongoose. The application is packaged in docker containers and deployed using docker compose. Nginx acts as a web server.",
-      "images": ["/fillib-1.jpg", "/fillib-2.jpg", "/fillib-3.jpg", "/fillib-4.jpg"],
+      "description": "Fillib is an online library for storing (managing) your watched movies as well as movies you plan to watch. In this web application, you can enter your own rating, description, and date you watched a movie. Afterwards, they will be automatically sorted on the tab viewed according to the date they were watched. There is filtering by genres in the ''watchlist'' section. The main page contains movies whose data is taken from Kinopoisk unofficial Api. Films are divided into categories. There are pagination and filtering. Their state is synchronized with the address bar. The frontend was developed using Vue js. Scss was used as a preprocessor for css. vuex was used as a global storage. The backend is implemented using node.js + express js. Authorization is implemented by jwt token. Libraries jsonwebtoken and mongoose were used. The application is packed in docker containers and deployed using docker compose. Nginx acts as a web server.",
+      "images": [
+        "/fillib-1.jpg",
+        "/fillib-2.jpg",
+        "/fillib-3.jpg",
+        "/fillib-4.jpg"
+      ],
       "tags": [
-        { "fieldName": "site", "fieldValue": ["http://bingual.eyrikhproductions.ru/"] },
-        { "fieldName": "github", "fieldValue": ["https://github.com/RobertEyrikh/FilLib", "https://github.com/RobertEyrikh/fillib-backend"] },
-        { "fieldName": "stack", "fieldValue": ["JavaScript, Vue 3, Express js, mongoDb"] }
+        {
+          "fieldName": "site",
+          "fieldValue": ["http://fillib.eyrikhproductions.ru/"]
+        },
+        {
+          "fieldName": "github",
+          "fieldValue": [
+            "https://github.com/RobertEyrikh/FilLib",
+            "https://github.com/RobertEyrikh/fillib-backend"
+          ]
+        },
+        {
+          "fieldName": "stack",
+          "fieldValue": ["JavaScript, Vue 3, Express js, mongoDb"]
+        }
       ]
     },
     {
       "name": "Nersisyan",
-      "description": "The site of the lawyer Nersisyan Karen Georgievich. This is a landing page with a feedback form implemented through a telegram bot. The app is developed with Vue.js. Used Bootstrap as a UI framework, axios library for asynchronous requests and vuelidate. The application is deployed using docker. Nginx acts as a web server.",
+      "description": "The site of the lawyer Nersisyan Karen Georgievich. This is a landing page with a feedback form implemented through a telegram bot. The app is developed with Vue.js. Bootstrap was used as a UI framework, axios library — for asynchronous requests and vuelidate. The application is deployed using docker. Nginx acts as a web server.",
       "images": ["/nersisyan-2.jpg", "/nersisyan-3.jpg", "/nersisyan-4.jpg"],
       "tags": [
-        { "fieldName": "site", "fieldValue": ["http://nersisyan.eyrikhproductions.ru/"] },
+        {
+          "fieldName": "site",
+          "fieldValue": ["https://advokat-nersisyan.ru/"]
+        },
         { "fieldName": "stack", "fieldValue": ["JavaScript, Vue 3, Bootstrap"] }
       ]
     },
     {
       "name": "Letherman",
-      "description": "Leatherman shop is an online leather goods store, as well as my first pet project. It has an admin panel in which you can create, modify and edit store products, authorization, password change, shopping cart, favorites, search and sorting, form validation, comment system with moderation. The serverless solution from google - Firebase is used here as a backend service. The frontend part of the application was developed using Vue js. Used libraries vuex, vuelidate, firebase, axios.",
-      "images": ["/bgshop-2.jpg", "/bgshop-3.jpg", "/bgshop-4.jpg", "/bgshop-5.jpg"],
+      "description": "Leatherman shop is an online leather goods store, as well as my first pet project. It has an admin panel in which you can create, modify and edit store products, authorization, password change, shopping cart, favorites, search and sorting, form validation, comment system with moderation. The serverless solution from google - Firebase is used here as a backend service. The frontend part of the application was developed using Vue js. Libraries vuex, vuelidate, firebase, axios are used.",
+      "images": [
+        "/bgshop-2.jpg",
+        "/bgshop-3.jpg",
+        "/bgshop-4.jpg",
+        "/bgshop-5.jpg"
+      ],
       "tags": [
-        { "fieldName": "github", "fieldValue": ["https://github.com/RobertEyrikh/OnlineBagShop"] },
-        { "fieldName": "stack", "fieldValue": ["JavaScript, TypeScript, Vue 3, Firebase"] }
+        {
+          "fieldName": "github",
+          "fieldValue": ["https://github.com/RobertEyrikh/OnlineBagShop"]
+        },
+        {
+          "fieldName": "stack",
+          "fieldValue": ["JavaScript, TypeScript, Vue 3, Firebase"]
+        }
       ]
     }
   ]

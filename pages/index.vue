@@ -21,7 +21,7 @@ const text = computed(() => {
     <v-container class="pl-10 pr-10">
       <v-row class="mt-0 mb-16">
         <v-card color="secondary-darken-1" rounded="lg" variant="elevated" class="mx-auto" width="522px" elevation="0">
-          <v-card-text class="d-flex justify-center text-subtitle-1">
+          <v-card-text class="d-flex justify-center text-subtitle-1 text-center">
             {{ text.brieflyBio }}
           </v-card-text>
         </v-card>
@@ -32,7 +32,7 @@ const text = computed(() => {
           <v-card-text text-color="white" class="pa-0">
             <v-row align="center" justify="space-between">
               <v-col>
-                <v-card-title class="pa-0 text-h4 font-weight-bold">{{ text.myName }}</v-card-title>
+                <v-card-title class="pa-0 pb-1 text-h4 font-weight-bold">{{ text.myName }}</v-card-title>
                 <v-card-text class="pa-0 text-subtitle-2">{{ text.brieflyDescription }}</v-card-text>
               </v-col>
               <v-col class="pl-0">
